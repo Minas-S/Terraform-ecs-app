@@ -1,1 +1,38 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+terraform.tfstate.backup
+*.tfvars
+*.tfvars.json
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraform.tfstate.lock.info
+.terraform.lock.hcl
+_terraform.rc
+terraform.rc
 
+# Docker
+*.log
+.env
+.env.*
+docker-cache/
+*.tmp
+
+# Python
+__pycache__/
+*.pyc
+venv/
+ENV/
+
+# OS/Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
