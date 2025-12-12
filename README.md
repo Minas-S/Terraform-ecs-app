@@ -42,17 +42,15 @@ Required permissions:
 
 Authenticate using AWS CLI:
 
-```bash
+bash
 aws configure
 
 or
 
 export AWS_PROFILE=default
 
-Configure Variables
-
-Copy the provided example file:
-
+## Terraform.tfvars file Sample
+###copy the example file
 cp terraform.tfvars.example terraform.tfvars
 
 Then edit terraform.tfvars:
@@ -66,7 +64,7 @@ app_port     = 5000
 
 ---
 
-🏗️ Deploy Infrastructure
+## Deploy Infrastructure
 
 Run all commands from the root folder.
 
@@ -85,41 +83,7 @@ terraform plan -out plan.tfplan
 4. Apply the plan
 
 terraform apply "plan.tfplan"
-
-Terraform will create:
-
-VPC, subnets, IGW, NAT
-
-ALB
-
-ECS cluster & service
-
-Task definition
-
-Security groups
-
-
-
----
-
-🌐 Access the Application
-
-After deployment, Terraform outputs:
-
-alb_dns_name = <value>
-
-Open in browser:
-
-http://<alb_dns_name>
-
-You should see your app running.
-
-
----
-
-🧹 Destroy Infrastructure
-
-To delete everything:
+ everything:
 
 terraform destroy
 
